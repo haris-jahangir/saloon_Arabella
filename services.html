@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salon Services | Arabella Beauty Saloon, Ajman</title>
+<meta name="description" content="Acrylics, nail art, haircare, facials, brow lamination, lashes, henna, waxing, manicure and pedicure at Arabella Beauty Saloon in Jurf 2, Ajman.">
+<meta name="theme-color" content="#8a1c57">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="pg-hero">
+  <div class="wrap">
+    <p class="eyebrow">Arabella Beauty Saloon · صالون ارابيلا</p>
+    <h1>Salon Services</h1>
+    <p class="sub hero-sub">Expert care in Jurf 2, Ajman · Book in a tap on WhatsApp</p>
+    <div class="searchbar">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="cq" type="search" placeholder="Search services" aria-label="Search services" autocomplete="off">
+    </div>
+    <div class="filters" id="cfilters">
+      <button class="on" data-cat="All">All</button>
+      <button data-cat="Nails">Nails</button>
+      <button data-cat="Hair">Hair</button>
+      <button data-cat="Face & Skin">Face &amp; Skin</button>
+      <button data-cat="Henna">Henna</button>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="catalog">
+  <div class="wrap">
+    <div class="ctools">
+      <p class="ccount" id="cCount"></p>
+      <div class="views" id="views" role="group" aria-label="View">
+        <button class="on" data-view="grid" aria-label="Grid view"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>Grid</button>
+        <button data-view="list" aria-label="List view"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><rect x="3" y="4" width="18" height="4" rx="2"/><rect x="3" y="10" width="18" height="4" rx="2"/><rect x="3" y="16" width="18" height="4" rx="2"/></svg>List</button>
+      </div>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+    <p class="cempty" id="cEmpty" hidden>No services match your search. <a href="#book">Ask us</a>, we may offer it.</p>
+    <p class="sub center-note">Prices and offers change, so please message us for the latest. Prefer home? <a href="home-services.html">Request a home visit</a>.</p>
+  </div>
+</section>
+
+<section class="section book" id="book">
+  <div class="wrap book-in">
+    <div>
+      <p class="eyebrow">Book Your Visit</p>
+      <h2>Reserve your slot</h2>
+      <p>Pick a service and preferred time. We'll confirm on WhatsApp.</p>
+    </div>
+    <form id="bookForm" class="card form">
+      <input name="name" placeholder="Your name" required>
+      <select name="service" required>
+        <option value="">Choose a service</option>
+        <option>Acrylics &amp; Nail Art</option><option>Manicure &amp; Pedicure</option><option>Haircare</option><option>Facials</option>
+        <option>Brow Lamination</option><option>Lash Extensions</option><option>Henna / Mehndi</option><option>Waxing</option>
+      </select>
+      <div class="row"><input type="date" name="date"><input type="time" name="time"></div>
+      <textarea name="note" rows="3" placeholder="Anything we should know? (optional)"></textarea>
+      <button class="btn" type="submit">Book on WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+<script src="services.js"></script>
+</body>
+</html>

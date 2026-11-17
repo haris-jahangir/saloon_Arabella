@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beauty Training Courses | Arabella Training Center, Ajman</title>
+<meta name="description" content="Certified beauty training in Ajman: nails, hair, eyelash and skin courses for beginners, advanced and complete programs at Arabella Training Center.">
+<meta name="theme-color" content="#8a1c57">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="pg-hero">
+  <div class="wrap">
+    <p class="eyebrow">Arabella Training Center · مركز تدريب</p>
+    <h1>Your start to your career</h1>
+    <p class="sub hero-sub">Beginners · Advanced · Complete · Certificate included</p>
+    <div class="searchbar">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="cq" type="search" placeholder="Search courses" aria-label="Search courses" autocomplete="off">
+    </div>
+    <div class="filters" id="cfilters">
+      <button class="on" data-cat="All">All</button>
+      <button data-cat="Nails">Nails</button>
+      <button data-cat="Hair">Hair</button>
+      <button data-cat="Eyelash & Brow">Eyelash &amp; Brow</button>
+      <button data-cat="Skin">Skin</button>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="catalog">
+  <div class="wrap">
+    <div class="ctools">
+      <p class="ccount" id="cCount"></p>
+      <div class="views" id="views" role="group" aria-label="View">
+        <button class="on" data-view="grid" aria-label="Grid view"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>Grid</button>
+        <button data-view="list" aria-label="List view"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><rect x="3" y="4" width="18" height="4" rx="2"/><rect x="3" y="10" width="18" height="4" rx="2"/><rect x="3" y="16" width="18" height="4" rx="2"/></svg>List</button>
+      </div>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+    <p class="cempty" id="cEmpty" hidden>No courses match your search. <a href="#enquire">Ask us</a>, we may offer it.</p>
+    <p class="sub center-note">Tap a thumbnail to enlarge the flyer. Schedules and fees: please message us.</p>
+  </div>
+</section>
+
+<section class="section book" id="enquire">
+  <div class="wrap book-in">
+    <div>
+      <p class="eyebrow">Join Our Team / Train With Us</p>
+      <h2>Registration now open</h2>
+      <p>Tell us what you'd like to learn and we'll message you the course levels, schedule and fees.</p>
+      <ul class="ticks"><li>Practical, hands-on training</li><li>Certificate on completion</li><li>Job-seeking and lifetime support</li></ul>
+    </div>
+    <form id="trainForm" class="card form">
+      <input name="name" placeholder="Your name" required>
+      <select name="course" required>
+        <option value="">I'm interested in…</option>
+        <option>Nail courses</option><option>Hair courses</option><option>Eyelash &amp; brow courses</option>
+        <option>Skin courses</option><option>Complete beauty program</option><option>Joining the Arabella team</option>
+      </select>
+      <button class="btn" type="submit">Enquire on WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+<script src="courses.js"></script>
+</body>
+</html>
