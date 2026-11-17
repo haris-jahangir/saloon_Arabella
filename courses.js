@@ -66,3 +66,6 @@ document.querySelectorAll("[data-filter]").forEach(a => a.addEventListener("clic
   if (b) b.click();
 }));
 render();
+
+const preset = new URLSearchParams(location.search).get("cat");
+if (preset) { const b = [...filters].find(x => x.dataset.cat === preset); if (b) b.click(); }

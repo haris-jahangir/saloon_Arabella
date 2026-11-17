@@ -12,24 +12,31 @@ const wa = text => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURICompon
 /* ===== Shared header + footer ===== */
 const PAGES = [
   ["index.html", "Home"],
-  ["courses.html", "Courses"],
-  ["services.html", "Salon Services"],
+  ["courses.html", "Courses", [["Nails", "Nails"], ["Hair", "Hair"], ["Eyelash & Brow", "Eyelash & Brow"], ["Skin", "Skin"]]],
+  ["services.html", "Salon Services", [["Nails", "Nails"], ["Hair", "Hair"], ["Face & Skin", "Face & Skin"], ["Henna", "Henna"]]],
   ["home-services.html", "Home Services"],
 ];
 const here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 $("#site-header").outerHTML = `
+<div class="promo">Book your slot today &amp; shine with confidence &nbsp;·&nbsp; <a href="tel:+971558499649">055 849 9649</a></div>
 <header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a href="index.html" class="brand">
-      <img src="assets/logo.png" alt="Arabella logo">
-      <span>Arabella<small>Beauty Saloon &amp; Training</small></span>
+  <div class="wrap nav-top">
+    <div class="nav-left">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <a href="index.html" class="logo-link" aria-label="Arabella Beauty Saloon and Training Center, home">
+      <img src="assets/logo.png" alt="Arabella logo" width="64" height="64">
     </a>
-    <nav id="menu" aria-label="Main">
-      ${PAGES.map(([h, t]) => `<a href="${h}"${h === here ? ' class="active" aria-current="page"' : ""}>${t}</a>`).join("")}
-      <a href="https://wa.me/${WHATSAPP}" target="_blank" rel="noopener" class="btn btn-sm menu-cta">Book Now</a>
-    </nav>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-right"></div>
   </div>
+  <nav id="menu" aria-label="Main">
+    <div class="wrap menu-in">
+      ${PAGES.map(([h, t, kids]) => {
+        const a = `<a href="${h}"${h === here ? ' class="active" aria-current="page"' : ""}>${t}</a>`;
+        return kids ? `<div class="has-sub">${a}<ul class="sub">${kids.map(([c, n]) => `<li><a href="${h}?cat=${encodeURIComponent(c)}#catalog">${n.replace("&", "&amp;")}</a></li>`).join("")}</ul></div>` : a;
+      }).join("")}
+    </div>
+  </nav>
 </header>`;
 $("#site-footer").outerHTML = `
 <footer>

@@ -47,3 +47,6 @@ filters.forEach(b => b.addEventListener("click", () => {
   render();
 }));
 render();
+
+const preset = new URLSearchParams(location.search).get("cat");
+if (preset) { const b = [...filters].find(x => x.dataset.cat === preset); if (b) b.click(); }
