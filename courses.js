@@ -1,25 +1,20 @@
-/* Course data. Flyer = image in assets/flyers/ */
+/* Course data. img = photo in assets/ */
 const COURSES = [
-  { t: "Manicure & Pedicure", lvl: "Beginners", cat: "Nails", img: 11, inc: ["Nail anatomy", "General tools", "Safety measures", "Manicure & pedicure procedure", "Hand & foot massage", "Sterilizing tools", "Aftercare", "Nail shapes & files"] },
-  { t: "Manicure & Pedicure", lvl: "Advanced", cat: "Nails", img: 12, inc: ["Common nail health issues", "Perfect nail length & shape", "Types of nails, bitten nails", "Pedicure procedure", "Ingrown toe nails", "Sterilizing tools"] },
-  { t: "Nail Polish & Gel Polish", lvl: "Basic", cat: "Nails", img: 13, inc: ["Nail preparation", "Product knowledge", "Polish application", "Polish basic art", "Polish removal", "Aftercare"] },
-  { t: "Acrylics", lvl: "Beginners", cat: "Nails", img: 19, inc: ["Types of nails", "Acrylic nail system", "Nail shapes & files", "Filing and shaping", "Nail drill and bits", "Lifting and popping", "Re-fill, re-balance, removal"] },
-  { t: "Acrylic", lvl: "Advanced", cat: "Nails", img: 20, inc: ["Dry manicure", "Bitten nails application", "3D designs", "Encapsulation", "Ombre, French, marble art", "Combined extensions", "Re-filing"] },
-  { t: "Hard Gel Extensions", lvl: "Beginners", cat: "Nails", img: 18, inc: ["Gel nail system", "Nail preparation & application", "Basic nail art, ombre", "Color mixing", "Filing and shaping", "Re-fill & removal"] },
-  { t: "PolyGel Extensions", lvl: "Beginners", cat: "Nails", img: 17, inc: ["PolyGel nail system", "Basic nail art, 3D nail art", "Color mixing", "Filing and shaping", "Re-fill & re-balance", "Removal"] },
-  { t: "Soft Gel (Gel X)", lvl: "Beginners", cat: "Nails", img: 16, inc: ["Nail preparation", "GelX tips preparation", "GelX application & shaping", "GelX refill", "GelX removal", "Aftercare"] },
-  { t: "Classic (Fake Nails) Extensions", lvl: "Beginners", cat: "Nails", img: 14, inc: ["Nail preparation", "Tips preparation", "Tips application & shaping", "Tips removal", "Aftercare"] },
-  { t: "Dip & Buff", lvl: "Basic", cat: "Nails", img: 23, inc: ["Nail preparation", "Dip application", "Dip art", "Aftercare"] },
-  { t: "Nail Drill", lvl: "Basic", cat: "Nails", img: 15, inc: ["Nail drill & bits", "Dry manicure", "Combined manicure", "Nail art", "Sterilizing and storing"] },
-  { t: "Nail Art", lvl: "Basic", cat: "Nails", img: 21, inc: ["Nail shapes & brushes", "Nail polish & gel polish art", "Ombre art", "French art", "Free hand art", "Marble designs"] },
-  { t: "Nail Art", lvl: "Advanced", cat: "Nails", img: 22, inc: ["Color theory", "3D art", "One stroke art", "Stamping", "Encapsulated art", "Foil & chrome art"] },
-  { t: "Hair Color", lvl: "Basic", cat: "Hair", img: 9, inc: ["Hair color techniques", "Hair bleaching techniques"] },
-  { t: "Hair Color", lvl: "Advanced", cat: "Hair", img: 9, inc: ["Advanced colour techniques", "Hair bleaching techniques"] },
-  { t: "Hair Cutting & Styling", lvl: "Complete", cat: "Hair", img: 9, inc: ["Hair cutting techniques", "Hair styling", "Blow-dry, straightening & curling"] },
-  { t: "Eyelash Extensions", lvl: "Advanced", cat: "Eyelash & Brow", img: 9, inc: ["Classic eyelash extensions", "Volume & hybrid lash extensions"] },
-  { t: "Eyelash Extensions", lvl: "Complete", cat: "Eyelash & Brow", img: 9, inc: ["Classic eyelash extensions", "Volume & hybrid lash extensions"] },
-  { t: "Eyelash Lifting & Eyebrow Lamination", lvl: "Advanced", cat: "Eyelash & Brow", img: 9, inc: ["Eyelash lifting", "Eyebrow lamination"] },
-  { t: "Skincare & Facials", lvl: "Beginners", cat: "Skin", img: 7, inc: ["Professional skincare training", "Facial techniques", "Beginner, advanced and complete programs"] },
+  { t: "Manicure & Pedicure", lvl: "Beginners & Advanced", cat: "Nails", img: "mani.jpg", inc: ["Nail anatomy", "General tools", "Safety measures", "Manicure & pedicure procedure", "Hand & foot massage", "Sterilizing tools", "Aftercare", "Nail shapes & files"] },
+  { t: "Nail Polish & Gel Polish", lvl: "Basic", cat: "Nails", img: "n-red.jpg", inc: ["Nail preparation", "Product knowledge", "Polish application", "Polish basic art", "Polish removal", "Aftercare"] },
+  { t: "Acrylics", lvl: "Beginners & Advanced", cat: "Nails", img: "n-pink.jpg", inc: ["Types of nails", "Acrylic nail system", "Nail shapes & files", "Filing and shaping", "Nail drill and bits", "Lifting and popping", "Re-fill, re-balance, removal"] },
+  { t: "Hard Gel Extensions", lvl: "Beginners", cat: "Nails", img: "n-black.jpg", inc: ["Gel nail system", "Nail preparation & application", "Basic nail art, ombre", "Color mixing", "Filing and shaping", "Re-fill & removal"] },
+  { t: "PolyGel Extensions", lvl: "Beginners", cat: "Nails", img: "n-marble.jpg", inc: ["PolyGel nail system", "Basic nail art, 3D nail art", "Color mixing", "Filing and shaping", "Re-fill & re-balance", "Removal"] },
+  { t: "Soft Gel (Gel X)", lvl: "Beginners", cat: "Nails", img: "n-tech.jpg", inc: ["Nail preparation", "GelX tips preparation", "GelX application & shaping", "GelX refill", "GelX removal", "Aftercare"] },
+  { t: "Classic (Fake Nails) Extensions", lvl: "Beginners", cat: "Nails", img: "n-gems.jpg", inc: ["Nail preparation", "Tips preparation", "Tips application & shaping", "Tips removal", "Aftercare"] },
+  { t: "Dip & Buff", lvl: "Basic", cat: "Nails", img: "n-light.jpg", inc: ["Nail preparation", "Dip application", "Dip art", "Aftercare"] },
+  { t: "Nail Drill", lvl: "Basic", cat: "Nails", img: "nails.jpg", inc: ["Nail drill & bits", "Dry manicure", "Combined manicure", "Nail art", "Sterilizing and storing"] },
+  { t: "Nail Art", lvl: "Basic & Advanced", cat: "Nails", img: "n-chrome.jpg", inc: ["Nail shapes & brushes", "Nail polish & gel polish art", "Ombre art", "French art", "Free hand art", "Marble designs"] },
+  { t: "Hair Color", lvl: "Basic & Advanced", cat: "Hair", img: "h-color.jpg", inc: ["Hair color techniques", "Hair bleaching techniques"] },
+  { t: "Hair Cutting & Styling", lvl: "Complete", cat: "Hair", img: "h-cut.jpg", inc: ["Hair cutting techniques", "Hair styling", "Blow-dry, straightening & curling"] },
+  { t: "Eyelash Extensions", lvl: "Advanced & Complete", cat: "Eyelash & Brow", img: "lash.jpg", inc: ["Classic eyelash extensions", "Volume & hybrid lash extensions"] },
+  { t: "Eyelash Lifting & Eyebrow Lamination", lvl: "Advanced", cat: "Eyelash & Brow", img: "brow.jpg", inc: ["Eyelash lifting", "Eyebrow lamination"] },
+  { t: "Skincare & Facials", lvl: "Beginners", cat: "Skin", img: "facial.jpg", inc: ["Professional skincare training", "Facial techniques", "Beginner, advanced and complete programs"] },
 ];
 
 const grid = document.getElementById("courseGrid");
@@ -36,9 +31,7 @@ function render() {
     (!term || [c.t, c.lvl, c.cat, ...c.inc].join(" ").toLowerCase().includes(term)));
   grid.innerHTML = list.map(c => `
     <article class="course reveal in">
-      <a class="thumb" href="assets/flyers/${c.img}.webp" data-zoom aria-label="Enlarge ${c.t} flyer">
-        <img src="assets/flyers/${c.img}.webp" alt="${c.t} ${c.lvl} flyer" loading="lazy">
-      </a>
+      <div class="thumb"><img src="assets/${c.img}" alt="${c.t}" loading="lazy"></div>
       <div class="cbody">
         <h3>${c.t}</h3>
         <p class="ccat">${c.lvl}</p>

@@ -478,3 +478,5 @@ body{overflow-x:clip;-webkit-tap-highlight-color:transparent}
 #menu .sub a:not(.btn)::after{display:none}
 #menu .sub a:not(.btn):hover{background:var(--blush);color:var(--plum)}
 @media (max-width:820px){.sub{display:none}}
+.about-img img[src*="home"],.band img{object-position:62% center}
+.about-img img[src*="home"],.band img{object-position:center 30%}
