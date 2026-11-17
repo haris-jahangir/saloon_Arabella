@@ -1,9 +1,30 @@
 /* ===== Settings ===== */
 const WHATSAPP = "971558499649";
 
-/* Real reviews: paste genuine customer reviews here (from Instagram / Google / Facebook).
-   Example: { name: "Customer name", service: "Nails", rating: 5, text: "Review text" } */
-const REVIEWS = [];
+/* Google rating summary + real reviews copied from the Google Maps listing.
+   To update: change the numbers, or add/remove { name, rating, text } entries. */
+const GOOGLE = { rating: 4.8, count: 138 };
+const REVIEWS = [
+  { name: "Alaa Adil", rating: 5, text: "10s all across the board. It is obvious that Mrs.Asia (the owner) is truly passionate, knowledgeable and genuine about how she runs the salon. Absolutely the best haircut of my life, I would definitely recommend to anyone wanting a true professional and satisfying treatment." },
+  { name: "Anagha PB", rating: 5, text: "From the warm welcome at the reception to the final touch-up, my experience at Arabella was wonderful. The staff were kind, professional, and attentive to every detail. The salon was spotless and had a calming ambiance." },
+  { name: "Nevein", rating: 5, text: "Lovely haircut experience! Great result, super kind and polite staff, and a very relaxing salon atmosphere. Definitely my go-to salon from now on." },
+  { name: "Shihana Shihab", rating: 5, text: "I'm beyond happy with my nail service! The work was neat, detailed, and beautifully done. I truly loved my experience here." },
+  { name: "Sadiya Nazir", rating: 5, text: "Excellent customer service! Santoshi did my hair so well and was very patient throughout the whole process. She made sure everything was done properly, and I absolutely love the results." },
+  { name: "Nafi Noor", rating: 5, text: "I recently completed a Hair Styling Course at Arabella Beauty Training Centre and had an excellent experience. The training was professional, practical, and very informative." },
+  { name: "Shami Shamie", rating: 5, text: "Place is so relaxing and the ambience is very calm. Staff are very accommodating and prices are very good for the services offered. The staff are very sincere and ensures you are always happy. Highly recommend this saloon." },
+  { name: "Lydia", rating: 5, text: "I joined Arabella Beauty Saloon as a fresher and had spent a good 2 months learning the basic course. I feel so proud that even upon completion, the trainer gave me support to find a job…" },
+  { name: "Santoshi Bhatta", rating: 5, text: "The saloon has been very accommodating and the staff are well trained. Warm welcome, clean and relaxing environment with very good service and the prices are affordable." },
+  { name: "Shaik Ayesha", rating: 5, text: "Mashallah, very hygienic and good staff. I feel very good when I visit this salon. Everyone must visit for salon service." },
+  { name: "Sara Ibr", rating: 5, text: "Aashika is very beautiful and successful. I had my eyelashes done and I liked it very much. I go to the salon just for her. I really like her work. I came here for the second time." },
+  { name: "Sanja Lulic", rating: 5, text: "My favorite place to do mani/pedi and henna. Girls are excellent. Always happy to be back. I highly recommend it!" },
+  { name: "Shaaban Biggz", rating: 5, text: "Took my nieces and they loved their henna just in time for Eid. Great customer service and helpful with last minute requests. Keep up the great work." },
+  { name: "Celani Mangena", rating: 5, text: "First time going to the saloon and I can say am glad I found this saloon. Did pedicure, manicure and eyebrows. Loved the service, wonderful customer service, place is clean and there are good friendly vibes in the saloon." },
+  { name: "Sabreena Bawazir", rating: 5, text: "I experienced a warm welcome on my first visit. I was quite taken by the friendliness of the staff and the cleanliness of the parlour. The service was carried out skillfully and patiently." },
+  { name: "M Siddique", rating: 5, text: "I am really glad I found this salon. I have really sensitive skin and Ms.Shiza, a member of the staff there, took special care and provided me really good service. And their pricing is really affordable." },
+  { name: "Jennifer Isnard", rating: 5, text: "Amazing service from Asiya and her team. She is so kind and the colors for the highlight were perfect, she understood exactly what I wanted." },
+  { name: "Salma Salim", rating: 5, text: "The crew was very friendly and welcoming. The salon was clean and had a very inviting ambience. The girls were very quick and professional in the way they did my nails." },
+  { name: "Bushra Tariq", rating: 5, text: "Shiza is very good, her hand is very soft and she is kind too. Deals with her customers very nicely. Well done." },
+];
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -12,8 +33,8 @@ const wa = text => window.open(`https://wa.me/${WHATSAPP}?text=${encodeURICompon
 /* ===== Shared header + footer ===== */
 const PAGES = [
   ["index.html", "Home"],
-  ["courses.html", "Courses", [["Nails", "Nails"], ["Hair", "Hair"], ["Eyelash & Brow", "Eyelash & Brow"], ["Skin", "Skin"]]],
-  ["services.html", "Salon Services", [["Nails", "Nails"], ["Hair", "Hair"], ["Face & Skin", "Face & Skin"], ["Henna", "Henna"]]],
+  ["courses.html", "Courses"],
+  ["services.html", "Salon Services"],
   ["home-services.html", "Home Services"],
 ];
 const here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -25,7 +46,7 @@ $("#site-header").outerHTML = `
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
     <a href="index.html" class="logo-link" aria-label="Arabella Beauty Saloon and Training Center, home">
-      <img src="assets/logo.png" alt="Arabella logo" width="64" height="64">
+      <img src="assets/logo.png" alt="Arabella Beauty Saloon and Training Center" height="54">
     </a>
     <div class="nav-right"></div>
   </div>
@@ -42,7 +63,7 @@ $("#site-footer").outerHTML = `
 <footer>
   <div class="wrap foot">
     <div class="foot-brand">
-      <div class="brand light"><img src="assets/logo.png" alt=""><span>Arabella<small>Beauty Saloon &amp; Training Center</small></span></div>
+      <div class="brand light"><img src="assets/logo.png" alt="Arabella Beauty Saloon and Training Center"></div>
       <p>Jurf 3 Building, Jurf 2, Ajman<br>055 849 9649</p>
     </div>
     <div class="foot-links">
@@ -97,31 +118,21 @@ $$('input[type="date"]').forEach(d => d.min = new Date().toISOString().split("T"
 /* ===== Reviews ===== */
 const revGrid = $("#revGrid");
 if (revGrid) {
-  const esc = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const KEY = "arabella-reviews";
-  const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch { return []; } };
-  const renderReviews = () => {
-    const all = [...REVIEWS, ...load()];
-    revGrid.innerHTML = all.length
-      ? all.map(r => `<article class="rev"><div class="st">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</div>
-          <p>“${esc(r.text)}”</p><div class="who">${esc(r.name)} · ${esc(r.service)}</div></article>`).join("")
-      : `<div class="rev empty">No reviews yet. Be the first to share your Arabella experience below.</div>`;
+  /* Reviews come from reviews.json, which a scheduled GitHub Action refreshes from Google
+     (see .github/workflows/reviews.yml). Writing a review sends people to the Google Maps listing. */
+  const REVIEW_LINK = "https://www.google.com/maps/place/Arabella+Beauty+Saloon+and+Training+Center/@25.4026369,55.5017395,17z/data=!4m8!3m7!1s0x3e5f5839e63315cb:0x189ec3cba00020c3!8m2!3d25.4026369!4d55.5017395!9m1!1b1!16s%2Fg%2F11hczky_fg";
+  $$(".g-write").forEach(a => a.href = REVIEW_LINK);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const stars = n => "★".repeat(Math.round(n)) + "☆".repeat(5 - Math.round(n));
+  const draw = d => {
+    const cards = (d.reviews || []).map(r => `<article class="rev"><div class="st">${stars(r.rating)}</div><p>“${esc(r.text)}”</p><div class="who">${esc(r.name)} · Google</div></article>`).join("");
+    revGrid.innerHTML = `<div class="slider"><button class="sl prev" aria-label="Previous reviews">‹</button><div class="track">${cards}</div><button class="sl next" aria-label="Next reviews">›</button></div>`;
+    const track = $(".track", revGrid);
+    const step = () => (track.querySelector(".rev")?.offsetWidth || 300) + 18;
+    $(".prev", revGrid).addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+    $(".next", revGrid).addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
   };
-  let rating = 5;
-  const stars = $$("#stars button");
-  const paint = v => stars.forEach(s => s.classList.toggle("on", +s.dataset.v <= v));
-  stars.forEach(s => s.addEventListener("click", () => { rating = +s.dataset.v; paint(rating); }));
-  paint(rating);
-  $("#revForm").addEventListener("submit", e => {
-    e.preventDefault();
-    const f = new FormData(e.target);
-    const list = load();
-    list.unshift({ name: f.get("name").trim(), service: f.get("service"), rating, text: f.get("text").trim() });
-    try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, 20))); } catch {}
-    e.target.reset(); rating = 5; paint(5); renderReviews();
-    $("#revNote").textContent = "Thank you! Your review has been added.";
-  });
-  renderReviews();
+  draw({ ...GOOGLE, reviews: REVIEWS });
 }
 
 /* ===== Flyer lightbox ===== */
