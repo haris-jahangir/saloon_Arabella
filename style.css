@@ -381,3 +381,9 @@ body{overflow-x:clip;-webkit-tap-highlight-color:transparent}
   .about{gap:2rem}
   .eyebrow{font-size:.7rem;margin-bottom:.5rem}
 }
+
+/* phone: filters wrap, no sideways scroll */
+@media (max-width:600px){
+  .filters{flex-wrap:wrap;overflow:visible;justify-content:center;margin:0;padding:0;gap:.45rem}
+  .filters button{flex:none;font-size:.8rem;padding:.45rem .95rem}
+}
