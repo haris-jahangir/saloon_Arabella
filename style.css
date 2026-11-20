@@ -577,3 +577,24 @@ footer .brand.light img{height:50px;background:none;padding:0;border-radius:0;fi
 .ig-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
 .ig-band .btn-light{color:#111}
 @media (max-width:600px){.ig-band{padding:48px 0}.ig-btns .btn{width:100%}}
+
+/* ===== v8: softer Instagram band + calmer, centred footer ===== */
+.ig-band{background:linear-gradient(160deg,#fff 0%,var(--blush) 60%,var(--pink) 150%);color:var(--plum-d)}
+.ig-band h2{color:var(--plum-d)}
+.ig-ico{color:var(--plum);border-color:var(--plum)}
+.ig-btns .btn{border:2px solid var(--plum);box-sizing:border-box;min-width:230px;text-align:center}
+.ig-btns .btn:not(.btn-ghost){border-color:transparent}
+footer{background:#1b1217}
+footer .foot{flex-direction:column;align-items:center;text-align:center;gap:1.4rem}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.8rem}
+.foot-brand p{margin:0;color:#cfc3c9}
+.socials{justify-content:center}
+.socials a{border:1px solid rgba(255,255,255,.35);color:#fff}
+.socials a:hover{background:#fff;color:#1b1217}
+.foot-logo{padding:1.2rem 0 .2rem}
+@media (max-width:600px){.ig-btns .btn{width:100%;min-width:0}}
+
+/* hero: Book Now just under the video caption, Instagram button below it */
+.hv-in .cta-row{margin-top:6rem;gap:.9rem}
+.btn-ig{display:inline-flex;align-items:center;justify-content:center;gap:.6rem}
+@media (max-width:600px){.hv-in .cta-row{flex-direction:column}.hv-in .cta-row .btn{width:100%;box-sizing:border-box;text-align:center}}

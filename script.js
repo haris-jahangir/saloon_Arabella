@@ -119,8 +119,7 @@ $$('input[type="date"]').forEach(d => d.min = new Date().toISOString().split("T"
 /* ===== Reviews ===== */
 const revGrid = $("#revGrid");
 if (revGrid) {
-  /* Reviews come from reviews.json, which a scheduled GitHub Action refreshes from Google
-     (see .github/workflows/reviews.yml). Writing a review sends people to the Google Maps listing. */
+  /* Reviews are listed in REVIEWS at the top of this file. Writing a review sends people to the Google Maps listing. */
   const REVIEW_LINK = "https://www.google.com/maps/place/Arabella+Beauty+Saloon+and+Training+Center/@25.4026369,55.5017395,17z/data=!4m8!3m7!1s0x3e5f5839e63315cb:0x189ec3cba00020c3!8m2!3d25.4026369!4d55.5017395!9m1!1b1!16s%2Fg%2F11hczky_fg";
   $$(".g-write").forEach(a => a.href = REVIEW_LINK);
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
