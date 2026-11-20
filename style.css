@@ -598,7 +598,3 @@ footer .foot{flex-direction:column;align-items:center;text-align:center;gap:1.4r
 .hv-in .cta-row{margin-top:6rem;gap:.9rem}
 .btn-ig{display:inline-flex;align-items:center;justify-content:center;gap:.6rem}
 @media (max-width:600px){.hv-in .cta-row{flex-direction:column}.hv-in .cta-row .btn{width:100%;box-sizing:border-box;text-align:center}}
-
-/* hero: white logo replaces the heading text */
-.hero .hv-in h1.hv-logo{margin:0;line-height:0}
-.hv-logo img{display:block;margin:0 auto;width:min(560px,86vw);height:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(0,0,0,.35))}
