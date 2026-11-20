@@ -568,4 +568,12 @@ footer .brand.light img{height:50px;background:none;padding:0;border-radius:0;fi
 .socials{display:flex;gap:.7rem;flex-wrap:wrap}
 
 /* keep the hero button below the caption baked into the video */
-.hv-in .cta-row{margin-top:5.5rem}
+.hv-in .cta-row{margin-top:8rem}
+
+/* ===== Instagram band ===== */
+.ig-band{background:#0d0d0d;color:#fff;text-align:center;padding:64px 0}
+.ig-band h2{color:#fff;margin:.8rem 0 1.6rem}
+.ig-ico{color:#fff;display:inline-block;padding:14px;border:1.5px solid rgba(255,255,255,.5);border-radius:50%;box-sizing:content-box}
+.ig-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.ig-band .btn-light{color:#111}
+@media (max-width:600px){.ig-band{padding:48px 0}.ig-btns .btn{width:100%}}
