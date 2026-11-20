@@ -561,3 +561,8 @@ footer .brand.light img{height:50px;background:none;padding:0;border-radius:0;fi
 .hv-in .cta-row{justify-content:center}
 .btn-outline-w{background:transparent;color:#fff;border:2px solid #fff;box-shadow:none}
 .btn-outline-w:hover{background:#fff;color:#111}
+
+/* footer: logo alone at the very bottom */
+.foot-logo{text-align:center;padding:1.6rem 0 .4rem}
+.foot-logo img{height:64px;width:auto;max-width:80%;filter:brightness(0) invert(1);opacity:.95}
+.socials{display:flex;gap:.7rem;flex-wrap:wrap}

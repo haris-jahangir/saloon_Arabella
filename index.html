@@ -18,16 +18,22 @@
 <main>
 <!-- HERO -->
 <section class="hero" id="top">
-  <video class="hv-video" autoplay muted loop playsinline preload="auto" poster="assets/nails.jpg" aria-hidden="true">
+  <video class="hv-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/nails.jpg" aria-hidden="true">
     <source src="assets/hero.mp4" type="video/mp4">
   </video>
+  <script>
+    /* slow motion: run the hero clip at 30% speed */
+    (function () {
+      var v = document.getElementById("heroVideo");
+      var slow = function () { v.playbackRate = 0.3; };
+      slow(); v.addEventListener("loadedmetadata", slow); v.addEventListener("play", slow);
+    })();
+  </script>
   <div class="hv-shade"></div>
   <div class="wrap hv-in">
     <h1>Beauty &amp; <em>Training</em></h1>
-    <p class="hv-sub">Jurf 2, Ajman</p>
     <div class="cta-row">
       <a href="services.html#book" class="btn">Book Now</a>
-      <a href="courses.html" class="btn btn-outline-w">Explore Courses</a>
     </div>
   </div>
 </section>

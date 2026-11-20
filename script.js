@@ -63,7 +63,6 @@ $("#site-footer").outerHTML = `
 <footer>
   <div class="wrap foot">
     <div class="foot-brand">
-      <div class="brand light"><img src="assets/logo.png" alt="Arabella Beauty Saloon and Training Center"></div>
       <p>Jurf 3 Building, Jurf 2, Ajman<br>055 849 9649</p>
     </div>
     <div class="foot-links">
@@ -72,10 +71,12 @@ $("#site-footer").outerHTML = `
     <div class="socials">
       <a href="https://www.instagram.com/arabella.beautysaloon" target="_blank" rel="noopener" aria-label="Instagram: Arabella Beauty Saloon" title="Instagram: Saloon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
       <a href="https://www.facebook.com/arabellabeautysaloon/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.400-1.300H17V2.200C16.700 2.100 15.800 2 14.700 2 12.300 2 10.700 3.500 10.700 6.100v2.400H8V12h2.700v10H14V12h2.600l.4-3.500H14z"/></svg></a>
+      <a href="https://www.tiktok.com/@arabellabeautysaloon" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></a>
       <a href="https://wa.me/${WHATSAPP}" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 21l1.400-4.600A8.500 8.500 0 1 1 8 19.700L3 21z"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2L9 8.500z" fill="currentColor" stroke="none"/></svg></a>
     </div>
   </div>
   <p class="copy">© ${new Date().getFullYear()} Arabella Beauty Saloon and Training Center, Ajman, UAE.</p>
+  <div class="foot-logo"><img src="assets/logo.png" alt="Arabella Beauty Saloon and Training Center"></div>
 </footer>
 <a class="float-wa" href="https://wa.me/${WHATSAPP}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.5 5.7 1.5 6.9 0 12.6-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10.300 10.300 0 0 1-1.600-5.500C5.400 9.800 10.100 5.200 16 5.200s10.600 4.600 10.600 10.300S21.800 25.800 16 25.800zm5.800-7.700c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.200c-.2.200-.4.200-.7.100-1.900-.9-3.100-1.700-4.300-3.800-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 2 .8 2.800.9 3.800.7.600-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.1-.3-.2-.6-.4z"/></svg>
